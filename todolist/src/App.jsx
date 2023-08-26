@@ -4,34 +4,57 @@ import TaskList from "./component/TaskList";
 
 const App = () => {
   const [tasks, setTasks] = useState([
-
-    
-    
+    {
+      task: "Learn react",
+      done: false,
+    },
+    {
+      task: "Learn next",
+      done: true,
+    },
   ]);
 
   const addTask = (task) => {
-    setTasks([...tasks, task]);
+    setTasks([
+      ...tasks,
+      {
+        task: task,
+        done: false,
+      },
+    ]);
   };
 
-  const deleteItem = (itemToDelete) => {
-    alert(`Do you Want delete ${itemToDelete}`);
+  
+  const deleteItem = (index) => {
+    // alert(`Do you Want delete ${JSON.stringify(index, null, 2)}`);
     // Create a new array without the item to delete
-    const updatedTasks = tasks.filter((task) => task !== itemToDelete);
+    const updatedTasks = tasks.filter(
+      (item,i) => i!== index
+    );
+    // const updatedTasks2 = tasks.filter((task) => task == itemToDelete);
+    console.log(updatedTasks);
     // Update the tasks state with the new array
-    setTasks(updatedTasks)
+    // setTasks2(updatedTasks2)
+    setTasks(updatedTasks);
   };
-
+  const doUndo = (item) => {
+    const updatedTasks = tasks.map((taskItem) =>
+      taskItem === item ? { ...taskItem, done: !taskItem.done } : taskItem
+    );
+    setTasks(updatedTasks);
+  };
+  
+  
   const removeAll = () => {
     setTasks([]);
   };
 
   return (
- 
     <div className="flex flex-col items-center">
       <h1 className="text-4xl m-16 font-bold">Sample Todo App</h1>
       {/* ... */}
       <TaskInput addTask={addTask} />
-      <TaskList tasks={tasks} deleteItem={deleteItem} removeAll={removeAll} />
+      <TaskList tasks={tasks} deleteItem={deleteItem} removeAll={removeAll} doUndo={doUndo} />
     </div>
   );
 };
