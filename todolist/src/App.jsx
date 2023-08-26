@@ -43,7 +43,13 @@ const App = () => {
     );
     setTasks(updatedTasks);
   };
-  
+
+//   <span
+//   className={`cursor-pointer ${item.done ? "line-through" : ""}`}
+//   onClick={() => doUndo(item)}
+// >
+//   {item.task}
+// </span>
   
   const removeAll = () => {
     setTasks([]);
