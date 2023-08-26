@@ -7,11 +7,11 @@ const TaskList = ({ tasks, deleteItem, removeAll, doUndo }) => {
         <ul className="">
           {tasks.map((item, index) => {
             return (
-              <li className=" bg-slate-200 rounded-xl px-4">
+              <li className=" bg-slate-200 rounded-xl px-4 font-bold">
                 <div className=" p-2 m-2 flex justify-between w-full items-center h-full">
                   <span
                     className={`cursor-pointer ${
-                      item.done ? "line-through" : ""
+                      item.done ? "line-through bg-red-200" : ""
                     } `}
                     onClick={() => doUndo(item)}
                   >
