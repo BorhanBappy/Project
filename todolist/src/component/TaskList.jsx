@@ -1,13 +1,15 @@
 import React from "react";
 
 const TaskList = ({ tasks, deleteItem, removeAll, doUndo }) => {
+  // console.log(tasks[2])
   return (
     <div className=" mr-28">
       {tasks.length > 0 ? (
         <ul className="">
           {tasks.map((item, index) => {
+            // console.log(item)
             return (
-              <li className=" bg-slate-200 rounded-xl px-4 font-bold">
+              <li key={index} className=" bg-slate-200 rounded-xl px-4 font-bold">
                 <div className=" p-2 m-2 flex justify-between w-full items-center h-full">
                   <span
                     className={`cursor-pointer ${

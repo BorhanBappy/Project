@@ -6,6 +6,7 @@ const TaskInput = ({ addTask }) => {
   const handleAddTask = () => {
     addTask(task);
     setTask("");
+    // console.log(setTask);
   };
 
   return (

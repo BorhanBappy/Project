@@ -13,8 +13,9 @@ const App = () => {
       done: true,
     },
   ]);
-
+  // console.log(tasks);
   const addTask = (task) => {
+    console.log();
     setTasks([
       ...tasks,
       {
@@ -24,15 +25,12 @@ const App = () => {
     ]);
   };
 
-  
   const deleteItem = (index) => {
     // alert(`Do you Want delete ${JSON.stringify(index, null, 2)}`);
     // Create a new array without the item to delete
-    const updatedTasks = tasks.filter(
-      (item,i) => i!== index
-    );
+    const updatedTasks = tasks.filter((item, i) => i !== index);
     // const updatedTasks2 = tasks.filter((task) => task == itemToDelete);
-    console.log(updatedTasks);
+    // console.log(updatedTasks);
     // Update the tasks state with the new array
     // setTasks2(updatedTasks2)
     setTasks(updatedTasks);
@@ -42,15 +40,16 @@ const App = () => {
       taskItem === item ? { ...taskItem, done: !taskItem.done } : taskItem
     );
     setTasks(updatedTasks);
+    console.log(...taskItem);
   };
 
-//   <span
-//   className={`cursor-pointer ${item.done ? "line-through" : ""}`}
-//   onClick={() => doUndo(item)}
-// >
-//   {item.task}
-// </span>
-  
+  //   <span
+  //   className={`cursor-pointer ${item.done ? "line-through" : ""}`}
+  //   onClick={() => doUndo(item)}
+  // >
+  //   {item.task}
+  // </span>
+
   const removeAll = () => {
     setTasks([]);
   };
@@ -60,7 +59,12 @@ const App = () => {
       <h1 className="text-4xl m-16 font-bold">Sample Todo App</h1>
       {/* ... */}
       <TaskInput addTask={addTask} />
-      <TaskList tasks={tasks} deleteItem={deleteItem} removeAll={removeAll} doUndo={doUndo} />
+      <TaskList
+        tasks={tasks}
+        deleteItem={deleteItem}
+        removeAll={removeAll}
+        doUndo={doUndo}
+      />
     </div>
   );
 };
