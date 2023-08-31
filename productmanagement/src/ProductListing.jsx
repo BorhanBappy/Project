@@ -3,40 +3,33 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { MDBBtn, MDBBtnGroup } from "mdb-react-ui-kit";
+
 const ProductListing = () => {
+  // State variables
   const [products, setProducts] = useState([]);
   const [value, setValue] = useState("");
-  const [sortField, setSortField] = useState(""); // Field by which to sort (price or discountPrice)
-  const [sortOrder, setSortOrder] = useState("asc"); // Sorting order (asc or desc)
+  const [sortField, setSortField] = useState("");
+  const [sortOrder, setSortOrder] = useState("asc");
+
   const navigate = useNavigate();
 
-  const LoadEdit = (id) => {
-    navigate("/product/edit/" + id);
-  };
-
-  const LoadDetail = (id) => {
-    navigate("/product/details/productName/" + id);
-  };
-
+  // Load products from API
   useEffect(() => {
     axios
       .get("http://localhost:3000/products")
       .then((response) => {
         setProducts(response.data);
-        // Store fetched products in state
       })
       .catch((error) => {
         console.error("Error:", error);
       });
-  }, []); // Empty dependency array to run effect after the initial render
+  }, []);
 
+  // Handlers
   const handleRemoveProduct = (productId) => {
-    // Send a DELETE request to the server to remove the product
     axios
       .delete(`http://localhost:3000/products/${productId}`)
       .then((response) => {
-        console.log("Product removed:", response.data);
-        // Update the products state to reflect the change
         setProducts(products.filter((product) => product.id !== productId));
       })
       .catch((error) => {
@@ -46,15 +39,14 @@ const ProductListing = () => {
 
   const handleSort = (field) => {
     if (field === sortField) {
-      // Toggle the sorting order if sorting the same field again
       setSortOrder(sortOrder === "asc" ? "desc" : "asc");
     } else {
-      // Default to ascending order when changing the sorting field
       setSortOrder("asc");
       setSortField(field);
     }
   };
 
+  // Sort products based on selected field and order
   const sortProducts = (data) => {
     if (sortField === "price" || sortField === "discountPrice") {
       const multiplier = sortOrder === "asc" ? 1 : -1;
@@ -64,6 +56,15 @@ const ProductListing = () => {
     }
     return data;
   };
+  //  Navigated another component
+  const LoadEdit = (id) => {
+    navigate(`/product/edit/${id}`);
+  };
+
+  const LoadDetail = (id) => {
+    navigate(`/product/details/productName/${id}`);
+  };
+
   return (
     <div className="container">
       <div className="row">
@@ -73,36 +74,39 @@ const ProductListing = () => {
               <h2>Product List</h2>
             </div>
             <div className="card-body">
+              {/* Filter and Sort Controls */}
               <div className="flex justify-between p-3 space-x-5">
                 <Link to="product/create" className="btn btn-success">
                   Add New (+)
                 </Link>
                 <input
-                  className=" ml-4 text-center bg-neutral-200 w-52 border-lime-600	"
+                  className="ml-4 text-center bg-neutral-200 w-52 border-lime-600"
                   type="text"
                   placeholder="Enter the product Name"
                   onChange={(e) => setValue(e.target.value)}
                 />
-                <label className=" space-x-3" htmlFor="sortSelect">Sort by:</label>
-                <select
-                  id="sortSelect"
-                  className="border p-1"
-                  value={sortField}
-                  onChange={(e) => handleSort(e.target.value)}
-                >
-                  <option value="">Select</option>
-                  <option value="price">Price (Low to High)</option>
-                  <option value="discountPrice">
-                    Discount Price (Low to High)
-                  </option>
-                  <option value="price">Price (High to Low )</option>
-
-                  <option value="discountPrice">
-                    Discount Price (High to Low)
-                  </option>
-                </select>
+                <div className="flex items-center space-x-3">
+                  <label htmlFor="sortSelect">Sort by:</label>
+                  <select
+                    id="sortSelect"
+                    className="border p-1"
+                    value={sortField}
+                    onChange={(e) => handleSort(e.target.value)}
+                  >
+                    <option value="">Select</option>
+                    <option value="price">Price (Low to High)</option>
+                    <option value="discountPrice">
+                      Discount Price (Low to High)
+                    </option>
+                    <option value="price">Price (High to Low)</option>
+                    <option value="discountPrice">
+                      Discount Price (High to Low)
+                    </option>
+                  </select>
+                </div>
               </div>
 
+              {/* Product Table */}
               <table className="table table-bordered">
                 <thead>
                   <tr>
