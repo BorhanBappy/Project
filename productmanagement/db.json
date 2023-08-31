@@ -4,8 +4,8 @@
       "id": 1,
       "productName": "Smartphone",
       "description": "High-end smartphone with advanced features.",
-      "price": "1699.99",
-      "discountPrice": "1589.99",
+      "price": "1599.99",
+      "discountPrice": "1389.99",
       "brand": "TechCo",
       "category": "Electronics"
     },
@@ -22,8 +22,8 @@
       "id": 3,
       "productName": "Running Shoes",
       "description": "Comfortable running shoes for athletes.",
-      "price": "889.99",
-      "discountPrice": "779.99",
+      "price": "989.99",
+      "discountPrice": "979.99",
       "brand": "SportsGear",
       "category": "Sports"
     },
@@ -40,8 +40,8 @@
       "id": 5,
       "productName": "T-shirt",
       "description": "Casual cotton t-shirt for everyday wear.",
-      "price": 19.99,
-      "discountPrice": 14.99,
+      "price": "799.99",
+      "discountPrice": "699.99",
       "brand": "FashionStyle",
       "category": "Clothing"
     },
@@ -59,7 +59,7 @@
       "productName": "Yoga Mat",
       "description": "High-quality yoga mat for comfortable workouts.",
       "price": 39.99,
-      "discountPrice": 34.99,
+      "discountPrice": "200.99",
       "brand": "FitnessPro",
       "category": "Sports"
     },
