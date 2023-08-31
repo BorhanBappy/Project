@@ -1,0 +1,195 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "productName": "Smartphone",
+      "description": "High-end smartphone with advanced features.",
+      "price": "1699.99",
+      "discountPrice": "1589.99",
+      "brand": "TechCo",
+      "category": "Electronics"
+    },
+    {
+      "id": 2,
+      "productName": "Laptop",
+      "description": "Powerful laptop for professional use.",
+      "price": 1299.99,
+      "discountPrice": 1199.99,
+      "brand": "TechPro",
+      "category": "Electronics"
+    },
+    {
+      "id": 3,
+      "productName": "Running Shoes",
+      "description": "Comfortable running shoes for athletes.",
+      "price": "889.99",
+      "discountPrice": "779.99",
+      "brand": "SportsGear",
+      "category": "Sports"
+    },
+    {
+      "id": 4,
+      "productName": "Wireless Earbuds",
+      "description": "True wireless earbuds with noise cancellation.",
+      "price": "1129.99",
+      "discountPrice": "1109.99",
+      "brand": "AudioTech",
+      "category": "Electronics"
+    },
+    {
+      "id": 5,
+      "productName": "T-shirt",
+      "description": "Casual cotton t-shirt for everyday wear.",
+      "price": 19.99,
+      "discountPrice": 14.99,
+      "brand": "FashionStyle",
+      "category": "Clothing"
+    },
+    {
+      "id": 6,
+      "productName": "Gaming Console",
+      "description": "Next-gen gaming console for immersive gaming experiences.",
+      "price": 499.99,
+      "discountPrice": 449.99,
+      "brand": "GameTech",
+      "category": "Electronics"
+    },
+    {
+      "id": 7,
+      "productName": "Yoga Mat",
+      "description": "High-quality yoga mat for comfortable workouts.",
+      "price": 39.99,
+      "discountPrice": 34.99,
+      "brand": "FitnessPro",
+      "category": "Sports"
+    },
+    {
+      "id": 8,
+      "productName": "Cookware Set",
+      "description": "Complete set of non-stick cookware for your kitchen.",
+      "price": 149.99,
+      "discountPrice": 129.99,
+      "brand": "KitchenEssentials",
+      "category": "Home"
+    },
+    {
+      "id": 9,
+      "productName": "Sunglasses",
+      "description": "Stylish polarized sunglasses for UV protection.",
+      "price": 59.99,
+      "discountPrice": 49.99,
+      "brand": "FashionShades",
+      "category": "Accessories"
+    },
+    {
+      "id": 10,
+      "productName": "Bluetooth Speaker",
+      "description": "Portable Bluetooth speaker with rich sound.",
+      "price": 79.99,
+      "discountPrice": 69.99,
+      "brand": "AudioWave",
+      "category": "Electronics"
+    },
+    {
+      "id": 11,
+      "productName": "Hiking Backpack",
+      "description": "Durable hiking backpack with multiple compartments.",
+      "price": 89.99,
+      "discountPrice": 79.99,
+      "brand": "OutdoorGear",
+      "category": "Outdoor"
+    },
+    {
+      "id": 12,
+      "productName": "Wristwatch",
+      "description": "Elegant wristwatch for a sophisticated look.",
+      "price": 199.99,
+      "discountPrice": 179.99,
+      "brand": "TimeMasters",
+      "category": "Accessories"
+    },
+    {
+      "id": 13,
+      "productName": "Coffee Machine",
+      "description": "Automatic coffee machine for brewing your favorite drinks.",
+      "price": 149.99,
+      "discountPrice": 129.99,
+      "brand": "BrewTech",
+      "category": "Kitchen"
+    },
+    {
+      "id": 14,
+      "productName": "Fitness Tracker",
+      "description": "Advanced fitness tracker for monitoring your health goals.",
+      "price": 69.99,
+      "discountPrice": 59.99,
+      "brand": "HealthTrack",
+      "category": "Electronics"
+    },
+    {
+      "id": 15,
+      "productName": "Leather Jacket",
+      "description": "Classic leather jacket for a timeless style.",
+      "price": 249.99,
+      "discountPrice": 219.99,
+      "brand": "FashionLeather",
+      "category": "Clothing"
+    },
+    {
+      "id": 16,
+      "productName": "Home Security Camera",
+      "description": "Smart home security camera for peace of mind.",
+      "price": 129.99,
+      "discountPrice": 119.99,
+      "brand": "SecureHome",
+      "category": "Home"
+    }
+  ],
+  "comments": [
+    {
+      "productId": 1,
+      "comments": [
+        {
+          "id": 101,
+          "text": "This smartphone is amazing!",
+          "rating": 5
+        },
+        {
+          "id": 102,
+          "text": "The camera quality could be better.",
+          "rating": 4
+        }
+      ]
+    },
+    {
+      "productId": 2,
+      "comments": [
+        {
+          "id": 103,
+          "text": "Fast and efficient performance.",
+          "rating": 5
+        },
+        {
+          "id": 104,
+          "text": "The battery life could be improved.",
+          "rating": 3
+        }
+      ]
+    },
+    {
+      "productId": 3,
+      "comments": [
+        {
+          "id": 105,
+          "text": "Great shoes for running long distances.",
+          "rating": 4
+        },
+        {
+          "id": 106,
+          "text": "Not very durable for rugged trails.",
+          "rating": 2
+        }
+      ]
+    }
+  ]
+}

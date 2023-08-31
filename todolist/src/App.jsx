@@ -14,12 +14,12 @@ const App = () => {
     },
   ]);
   // console.log(tasks);
-  const addTask = (task) => {
+  const addTask = (tak) => {
     console.log();
     setTasks([
       ...tasks,
       {
-        task: task,
+        task: tak,
         done: false,
       },
     ]);
