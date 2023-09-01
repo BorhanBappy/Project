@@ -4,7 +4,7 @@
       "id": 1,
       "productName": "Smartphone",
       "description": "High-end smartphone with advanced features.",
-      "price": "1599.99",
+      "price": "1499.99",
       "discountPrice": "1389.99",
       "brand": "TechCo",
       "category": "Electronics"
@@ -143,6 +143,15 @@
       "discountPrice": 119.99,
       "brand": "SecureHome",
       "category": "Home"
+    },
+    {
+      "productName": "ll",
+      "description": "",
+      "price": "",
+      "discountPrice": "",
+      "brand": "ll",
+      "category": "",
+      "id": 17
     }
   ],
   "comments": [

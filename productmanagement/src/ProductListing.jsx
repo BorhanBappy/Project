@@ -3,7 +3,6 @@ import axios from "axios";
 import { Link } from "react-router-dom";
 import { useNavigate } from "react-router-dom";
 import { MDBBtn, MDBBtnGroup } from "mdb-react-ui-kit";
-
 const ProductListing = () => {
   // State variables
   const [products, setProducts] = useState([]);
@@ -157,6 +156,7 @@ const ProductListing = () => {
                             className="btn btn-primary"
                             onClick={() => {
                               LoadDetail(product.id);
+                              
                             }}
                           >
                             Details
